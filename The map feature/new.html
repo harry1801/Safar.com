@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbai Theme Itinerary Generator</title>
+</head>
+<body>
+    <h1>Mumbai Theme Itinerary Generator</h1>
+    
+    <!-- User Preferences Form -->
+    <form id="preferencesForm">
+        <label for="themeSelect">Select a Theme:</label>
+        <select id="themeSelect">
+            <option value="historical">Historical Mumbai</option>
+            <option value="foodie">Foodie's Paradise</option>
+           
+        </select>
+
+        <label for="budget">Budget:</label>
+        <input type="number" id="budget" min="0" step="1000" placeholder="Enter your budget">
+        
+        <label for="travelDate">Travel Date:</label>
+        <input type="date" id="travelDate">
+        
+        <!-- Add more preference options here -->
+        
+        <button type="submit">Generate Itinerary</button>
+    </form>
+
+    <!-- Generated Itinerary Display -->
+    <div id="itinerary">
+        <h2>Your Mumbai Itinerary:</h2>
+        <ul id="itineraryList">
+            <!-- Itinerary items will be displayed here -->
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('preferencesForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get user preferences
+            const selectedTheme = document.getElementById('themeSelect').value;
+            const budget = document.getElementById('budget').value;
+            const travelDate = document.getElementById('travelDate').value;
+
+            // Implement your algorithm to generate the itinerary here
+            const generatedItinerary = generateItinerary(selectedTheme, budget, travelDate);
+
+            // Display the generated itinerary
+            displayItinerary(generatedItinerary);
+        });
+
+        // Mock function to generate an itinerary (replace with your algorithm)
+        function generateItinerary(theme, budget, travelDate) {
+            // Replace this with actual data from your database
+            const itineraryData = {
+                theme: theme,
+                budget: budget,
+                travelDate: travelDate,
+                items: [
+                    'Visit Gateway of India',
+                    'Explore Elephanta Caves',
+                    'Enjoy street food at Juhu Beach',
+                    // Add more itinerary items here
+                ],
+            };
+            return itineraryData;
+        }
+
+        // Display the generated itinerary on the webpage
+        function displayItinerary(itinerary) {
+            const itineraryList = document.getElementById('itineraryList');
+            itineraryList.innerHTML = '';
+
+            itinerary.items.forEach((item) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+                itineraryList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

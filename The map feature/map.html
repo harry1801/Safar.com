@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Safar - Mumbai Tourist Map</title>
+    <!-- Include Leaflet CSS and JavaScript files -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Include your custom CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    
+    <div class="navbar">
+        <h1>Safar</h1>
+        <ul>
+            <li><a href="#home-section">Home</a></li>
+            <li><a href="#services-section">Services</a></li>
+            <li><a href="#hotel-section">Hotel</a></li>
+            <li><a href="#restaurant-section">Restaurant</a></li>
+            <li><a href="#blog-section">Blog</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+        </ul>
+    </div>
+    
+    <div id="map"></div>
+    <div class="container">
+        <!-- Create a search box for users to find locations -->
+        <div class="search-box">
+            <input type="text" id="location-search" placeholder="Search for a location" onkeyup="showSuggestions()">
+            <button onclick="searchLocation()">Search</button>
+        </div>
+
+        <!-- Suggestions dropdown -->
+        <div class="suggestions">
+            <ul id="suggestions-list">
+                <!-- Suggestions will appear here -->
+            </ul>
+        </div>
+    </div>
+
+    
+    
+
+    <!-- List of popular places in Mumbai -->
+    <div class="places-list">
+        <h2>Popular Places in Mumbai</h2>
+        <ul>
+            <li><a href="#" onclick="highlightLocation(18.9220, 72.8347)">Gateway of India</a></li>
+            <li><a href="#" onclick="highlightLocation(18.9402, 72.8337)">Chhatrapati Shivaji Terminus</a></li>
+            <!-- Add more places here -->
+        </ul>
+    </div>
+
+    <!-- Create a category filter dropdown -->
+    <div class="category-filter">
+        <label for="category-select">Select a Category:</label>
+        <select id="category-select" onchange="filterByCategory()">
+            <option value="all">All Categories</option>
+            <option value="landmarks">Landmarks</option>
+            <option value="beaches">Beaches</option>
+            <option value="temples">Temples</option>
+            <option value="museums">Museums</option>
+            <option value="parks">Parks</option>
+            <option value="aquariums">Aquariums</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="religious">Religious Sites</option>
+            <option value="forts">Forts</option>
+            <option value="lakes">Lakes</option>
+            <option value="sports">Sports Venues</option>
+            <option value="markets">Markets</option>
+            <option value="zoos">Zoos</option>
+            <option value="hospitals">Hospitals</option>
+            <option value="theatres">Theatres</option>
+            <!-- Add more categories as needed -->
+        </select>
+    </div>
+    
+</div>
+
+    <!-- Include your custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

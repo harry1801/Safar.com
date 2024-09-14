@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Safar.com - Explore Your Dining Options</title>
+</head>
+<body>
+    <header>
+        <h1>Safar.com</h1>
+        <p>Explore Your Dining Options</p>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Find Restaurants</h2>
+            <form id="recommendForm">
+                <div class="form-group">
+                    <label for="area">Enter Your Area:</label>
+                    <input type="text" id="area" name="area" required>
+                </div>
+                <div class="price-range">
+                    <label for="priceMin">Price Range:</label>
+                    <input type="number" id="priceMin" name="priceMin" placeholder="Min" required>
+                    <span>-</span>
+                    <input type="number" id="priceMax" name="priceMax" placeholder="Max" required>
+                </div>
+                <br>
+                <div class="rating-range">
+                    <label for="ratingMin">Rating Range:</label>
+                    <input type="number" id="ratingMin" name="ratingMin" placeholder="Min" required>
+                    <span>-</span>
+                    <input type="number" id="ratingMax" name="ratingMax" placeholder="Max" required>
+                </div>
+                <br>
+                <button type="submit">Get Recommendations</button>
+            </form>
+        </div>
+        <div id="recommendations-container">
+            <h2>Recommended Restaurants</h2>
+            <div id="recommendations"></div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

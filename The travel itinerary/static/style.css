@@ -1,0 +1,101 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+}
+
+/* Form input styles */
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styles */
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Itinerary result styles */
+/* Add this CSS code to your style.css file */
+
+/* Itinerary container styles */
+.itinerary {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Heading styles for the itinerary */
+.itinerary h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styles for the itinerary content */
+.itinerary p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Style for ordered lists (itinerary items) */
+.itinerary ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+/* Style for list items (itinerary details) */
+.itinerary li {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Add additional styles as needed for customization */
+
+/* Additional styles can be added as needed for further customization. */

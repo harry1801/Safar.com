@@ -1,0 +1,242 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #bfe8ff, #e4faff, #c4f0c4, #bfe8ff, #e4faff, #c4f0c4); /* Light blue and green gradient */
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+/* Style the navbar container */
+.navbar {
+    background-color: #fff; /* Background color for the navbar */
+    color:black; /* Text color for the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px; /* Adjust padding as needed */
+}
+
+/* Style the navbar brand */
+.navbar h1 {
+    font-family: "Arial", sans-serif; /* Change the font family as needed */
+    font-size: 28px; /* Adjust the font size as desired */
+    margin: 0;
+}
+
+/* Style the navigation links */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px; /* Adjust the font size as needed */
+    font-family: "Poppins", Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #e2c0bb; /* Change color on hover */
+}
+
+/* Style the dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Background color for the dropdown */
+    min-width: 160px; /* Adjust the width as needed */
+    z-index: 1;
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+}
+
+.navbar ul li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ff5733; /* Change color on hover */
+}
+
+
+/* Add hover effect to the navbar */
+/* .navbar:hover {
+    background-color: #357dbf; 
+    transition: background-color 0.3s ease; 
+} */
+
+/* Style the map container */
+#map {
+    float: right;
+    width: 50%;
+    height: 400px;
+    margin: 20px 40px 15px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5; /* Light gray background for the map container */
+}
+
+/* Style the search box */
+.search-box {
+    margin: 30px 5px 15px 40px;
+  
+}
+
+#location-search {
+    padding: 10px;
+    width:30%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#location-search:focus {
+    outline: none;
+    border-color: #4a90e2; /* Matching blue color for focus */
+}
+
+/* Style the search button */
+#location-search + button {
+    padding: 10px 20px;
+   
+    background-color: #4a90e2; /* Matching blue button background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the suggestions dropdown */
+.suggestions {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin:0px 5px 15px 40px;
+    z-index: 1;
+}
+
+.suggestions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Style the popular places list */
+.places-list {
+    position: absolute;
+    margin: 100px 5px 15px 40px;
+    width: 40%;
+    height: 27%;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.places-list h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 20px;
+}
+
+.places-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.places-list li {
+    margin-bottom: 10px;
+}
+
+/* Style links */
+a {
+    text-decoration: none;
+    color: #4a90e2; /* Matching blue color for links */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #357dbf; /* Slightly darker blue for hover effect */
+}
+
+/* Additional styles as needed */
+/* Style for the category filter container */
+.category-filter {
+    margin-bottom: 20px;
+}
+
+/* Style for the label */
+.category-filter label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-left: 40px;
+}
+
+/* Style for the select dropdown */
+#category-select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+}
+
+/* Style for the options in the dropdown */
+#category-select option {
+    font-size: 14px;
+}
+
+/* Style for the selected option */
+#category-select option:checked {
+    background-color: #007BFF;
+    color: #fff;
+}
