@@ -1,0 +1,12 @@
+.btn-outline-brown {
+    border: 1px solid brown!important;
+}
+
+.btn-outline-brown:hover {
+    background-color: brown;
+    color: white;
+}
+
+img {
+    width: 100%!important;
+}
