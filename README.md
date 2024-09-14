@@ -49,10 +49,6 @@ To run this project locally, follow these steps:
 
 Feel free to open an issue or submit a pull request if you have suggestions or improvements.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - **Leaflet.js**: For interactive map functionalities.
